@@ -47,7 +47,7 @@ export default {
     },
     toggle_menu(name, event) {
       event.stopPropagation();
-      const ref = this.$refs[name][0];
+      const ref = this.$refs[name];
       const disabled = ref.item && ref.item.disabled;
       const touch = event.sourceCapabilities && event.sourceCapabilities.firesTouchEvents;
       this.menu_open = ref.is_menu && !disabled ? (touch ? true : !this.menu_open) : false;
